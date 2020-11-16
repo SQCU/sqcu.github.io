@@ -13,12 +13,12 @@
       <pubDate>Sun, 15 Nov 2020 17:44:56 -0800</pubDate>
       
       <guid>https://sqcu.github.io/posts/just-about-skeledone/</guid>
-      <description>&amp;ldquo;should probably post a design brief or update on github so it looks fresh when linked, which is a shameless and obvious and still probably correct play to make&amp;rdquo;
-&amp;ldquo;lmaoo how the HECK can you do decent visual design without falling on the trash &amp;rsquo;10s generic pixel artstyle&amp;rdquo;
-my guesses would be:
--use 8 bit color or more
--use bright colors and big sprites
--polysprite, using multiple simple sprites animated together which can double as game-logic hitboxes that let you avoid having to do super complicated hitbox /hurtboxing in a separate design later</description>
+      <description>sqcu:&amp;ldquo;should probably post a design brief or update on github so it looks fresh when linked, which is a shameless and obvious and still probably correct play to make&amp;rdquo;
+sqcu:&amp;ldquo;lmaoo how the HECK can you do decent visual design without falling on the trash &amp;rsquo;10s generic pixel artstyle&amp;rdquo;
+sqcu:my guesses would be:
+sqcu:-use 8 bit color or more
+sqcu:-use bright colors and big sprites
+sqcu:-polysprite, using multiple simple sprites animated together which can double as game-logic hitboxes that let you avoid having to do super complicated hitbox /hurtboxing in a separate design later</description>
     </item>
     
     <item>
