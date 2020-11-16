@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Same QCU</title>
+    <link>http://example.org/</link>
+    <description>Recent content on Same QCU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Nov 2020 17:44:56 -0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Just About Skeledone</title>
+      <link>http://example.org/posts/just-about-skeledone/</link>
+      <pubDate>Sun, 15 Nov 2020 17:44:56 -0800</pubDate>
+      
+      <guid>http://example.org/posts/just-about-skeledone/</guid>
+      <description>&amp;ldquo;should probably post a design brief or update on github so it looks fresh when linked, which is a shameless and obvious and still probably correct play to make&amp;rdquo;
+&amp;ldquo;lmaoo how the HECK can you do decent visual design without falling on the trash &amp;rsquo;10s generic pixel artstyle&amp;rdquo;
+my guesses would be:
+-use 8 bit color or more
+-use bright colors and big sprites
+-polysprite, using multiple simple sprites animated together which can double as game-logic hitboxes that let you avoid having to do super complicated hitbox /hurtboxing in a separate design later</description>
+    </item>
+    
+    <item>
+      <title>Static Site Generators</title>
+      <link>http://example.org/posts/henlo-world/</link>
+      <pubDate>Sun, 15 Nov 2020 16:15:16 -0800</pubDate>
+      
+      <guid>http://example.org/posts/henlo-world/</guid>
+      <description>Peer Pressure and Static Site Generation So I had heard many stories about static site generation, about the possible gains in consistency, rapidity of development, of not needing to codge together some hideous mnemonic device to truly understand your sitemap as you frantically tab from html to html in your text editor of choice.
+Editing naked html feels perfectly fine, but messing with styling is inconvenient, someone else already made all of these themes, and your favorite chat app has been subtly converting you to use markdown syntax instead of fields of blooming &amp;lt;angle brackies&amp;gt; as far as the eye can &amp;lt;/see&amp;gt;.</description>
+    </item>
+    
+  </channel>
+</rss>
