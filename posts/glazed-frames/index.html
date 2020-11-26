@@ -185,6 +185,7 @@ transform-call-cost * bones-in-biggest-rig-graph<br>
 -if you wanted a really stupid number of animated entities in a scene, you could run the operations to transform skeleton 1 through 23,467 concurrently.<br>
 -the transforms we want to apply on our BONES sure sound like they might be modeled by lin alg.<br>
 -i google &ldquo;javascript cuda&rdquo; -&gt; &ldquo;about 16,200,000 results (0.44 seconds) &quot;</p>
+<p><img src="/images/chrome_2020-11-26_12-02-22.png" alt="sure looks faster!"></p>
 <p>Looking at <a href="https://gpu.rocks">gpu.js</a> first and neglecting to cross-compare any other libraries,<br>
 it sure sounds like we can just serve up a bunch of matrix multiplications to someone else&rsquo;s GPU compute API.<br>
 This seems worth exploring!
