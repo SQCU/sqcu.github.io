@@ -6,7 +6,20 @@
     <description>Recent content in Posts on Same QCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Nov 2020 17:44:56 -0800</lastBuildDate><atom:link href="https://sqcu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Nov 2020 11:27:58 -0800</lastBuildDate><atom:link href="https://sqcu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Glazed Frames</title>
+      <link>https://sqcu.github.io/posts/glazed-frames/</link>
+      <pubDate>Thu, 26 Nov 2020 11:27:58 -0800</pubDate>
+      
+      <guid>https://sqcu.github.io/posts/glazed-frames/</guid>
+      <description>Some thoughts about BONES -rotation operations to resolve all of the bones in a rig are only dependent on previous bones within that rig.
+-this means the longest series of dependent transforms is, at worst case,
+transform-call-cost * bones-in-biggest-rig-graph
+-if you wanted a really stupid number of animated entities in a scene, you could run the operations to transform skeleton 1 through 23,467 concurrently.
+-the transforms we want to apply on our BONES sure sound like they might be modeled by lin alg.</description>
+    </item>
+    
     <item>
       <title>Just About Skeledone</title>
       <link>https://sqcu.github.io/posts/just-about-skeledone/</link>
