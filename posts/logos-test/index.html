@@ -205,6 +205,7 @@ Having an object translate about the canvas in a circle-shaped path was remarkab
 Various edits produced various odd orbits, typically with one (or more!) focuses besidse the center of the canvas, and no particular change seemed to flush out the underlying error.<br>
 <video controls> <source src="/images/round-three-aka-double-orbit.webm" type="video/webm"> </video>
 Anyways, I started to suspect that it was less and less likely that the combinations of translation and rotation calls was leaving behind unintended state, and more and more likely that there was some kind of odd off-by-one error.<br>
+<img src="/images/linear-oscillator.png" alt="Return, gift of the goddess">
 Pulling out the orbit and just testing the results of our<br>
 target = [displacement<em>Math.cos(theta), displacement</em>Math.sin(theta)];<br>
 line of code produced some interesting results!<br>
@@ -213,7 +214,6 @@ line of code produced some interesting results!<br>
 While our oscillating glyph appeared to be centered relative to our plotted center glyph, neither the center glyph nor the oscillating glyph were centered relative to the canvas!<br>
 I had completely forgotten that our draw calls were plotting from the top left corner of our plotted glyphs.<br>
 Calling rotations at the same coordinates we used to draw our glyphs introduced error in our axis of rotation in proportion to the width of our glyphs, and &lsquo;correct&rsquo; rotation routines would dance about an offset from our center glyph no matter how we wrote them.<br>
-<img src="/images/linear-oscillator.png" alt="Return, gift of the goddess">
 This was relatively simple to fix.<br>
 Our next project can apply these orders of operations in more pleasing and scalable routine.<br>
 <video controls> <source src="/images/full-circle.webm" type="video/webm"> </video></p>
