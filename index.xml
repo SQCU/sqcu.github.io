@@ -6,7 +6,20 @@
     <description>Recent content on Same QCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Nov 2020 11:27:58 -0800</lastBuildDate><atom:link href="https://sqcu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Dec 2020 12:24:46 -0800</lastBuildDate><atom:link href="https://sqcu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LOGOS TEST</title>
+      <link>https://sqcu.github.io/posts/logos-test/</link>
+      <pubDate>Tue, 01 Dec 2020 12:24:46 -0800</pubDate>
+      
+      <guid>https://sqcu.github.io/posts/logos-test/</guid>
+      <description>The doxa are clearly established.
+A decent, morally upstanding, firm, thick, upright &amp;lsquo;kin of the code&amp;rsquo; only ever makes one change at a time. Unfortunately, the atomic unit of realtime animation is something like
+&amp;ldquo;a routine that moves in a pattern that changes over time so that it might be made clear it is programmatically defined&amp;rdquo;.
+This means testing a few new methods.
+Window.requestAnimationFrame() Helpfully, moz docs provided literally everything we needed to know to use requestAnimationFrame to write framerate-independent animation controls, logic, and draw calls.</description>
+    </item>
+    
     <item>
       <title>Glazed Frames</title>
       <link>https://sqcu.github.io/posts/glazed-frames/</link>
