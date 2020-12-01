@@ -215,6 +215,7 @@ While our oscillating glyph appeared to be centered relative to our plotted cent
 I had completely forgotten that our draw calls were plotting from the top left corner of our plotted glyphs.<br>
 Calling rotations at the same coordinates we used to draw our glyphs introduced error in our axis of rotation in proportion to the width of our glyphs, and &lsquo;correct&rsquo; rotation routines would dance about an offset from our center glyph no matter how we wrote them.<br>
 This was relatively simple to fix.<br>
+<img src="/images/late-approach.png" alt="Status quo.">
 Our next project can apply these orders of operations in more pleasing and scalable routine.<br>
 <video controls> <source src="/images/full-circle.webm" type="video/webm"> </video></p>
 <h1 id="rudimentary-styling">Rudimentary Styling</h1>
