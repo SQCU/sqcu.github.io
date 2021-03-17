@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Ruby Tutorial Speedrun | Same QCU</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Ruby Tutorial Speedrun" />
+<meta property="og:description" content="PREFACE This is a story about how I accepted an interview with an organization that seemed to think I was a &ldquo;ruby&rdquo; (rails presumably?) developer.
+Unwilling to disabuse a nice technical recruiter, and with only 1 full day to prepare for the interview&hellip;
+CHAPTER ONE: HELLO WORLDING provisioned IDE [x]
+configured remote cloud9 instance for rails [x]
+initializing project [x]
+amended project gemfile [x]	2021-03-16-1632
+bundle update, bundle install, resolved dependencies [x]	1638" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sqcu.github.io/posts/ruby-tutorial-speedrun/" />
+<meta property="article:published_time" content="2021-03-17T08:47:11+03:00" />
+<meta property="article:modified_time" content="2021-03-17T08:47:11+03:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ruby Tutorial Speedrun"/>
+<meta name="twitter:description" content="PREFACE This is a story about how I accepted an interview with an organization that seemed to think I was a &ldquo;ruby&rdquo; (rails presumably?) developer.
+Unwilling to disabuse a nice technical recruiter, and with only 1 full day to prepare for the interview&hellip;
+CHAPTER ONE: HELLO WORLDING provisioned IDE [x]
+configured remote cloud9 instance for rails [x]
+initializing project [x]
+amended project gemfile [x]	2021-03-16-1632
+bundle update, bundle install, resolved dependencies [x]	1638"/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://sqcu.github.io/css/style-white.css">
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://sqcu.github.io/images/favicon.ico" />
+
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://sqcu.github.io/posts/logos-test/">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&text=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&title=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&is_video=false&description=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Ruby%20Tutorial%20Speedrun&body=Check out this article: https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&title=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&title=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&title=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-stumbleupon " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&title=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-digg " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&name=Ruby%20Tutorial%20Speedrun&description=PREFACE%20This%20is%20a%20story%20about%20how%20I%20accepted%20an%20interview%20with%20an%20organization%20that%20seemed%20to%20think%20I%20was%20a%20%26ldquo%3bruby%26rdquo%3b%20%28rails%20presumably%3f%29%20developer.%0aUnwilling%20to%20disabuse%20a%20nice%20technical%20recruiter%2c%20and%20with%20only%201%20full%20day%20to%20prepare%20for%20the%20interview%26hellip%3b%0aCHAPTER%20ONE%3a%20HELLO%20WORLDING%20provisioned%20IDE%20%5bx%5d%0aconfigured%20remote%20cloud9%20instance%20for%20rails%20%5bx%5d%0ainitializing%20project%20%5bx%5d%0aamended%20project%20gemfile%20%5bx%5d%092021-03-16-1632%0abundle%20update%2c%20bundle%20install%2c%20resolved%20dependencies%20%5bx%5d%091638">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&t=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#provisioned-ide">provisioned IDE</a></li>
+    <li><a href="#configured-remote-cloud9-instance-for-rails">configured remote cloud9 instance for rails</a></li>
+    <li><a href="#initializing-project">initializing project</a></li>
+    <li><a href="#amended-project-gemfile">amended project gemfile</a></li>
+    <li><a href="#bundle-update-bundle-install-resolved-dependencies">bundle update, bundle install, resolved dependencies</a></li>
+    <li><a href="#we-did-it-reddit">we did it reddit</a></li>
+    <li><a href="#hello-worlded">hello worlded</a></li>
+    <li><a href="#git-single-time-setup-steps">git single time setup steps</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#resolved-git-issues-theres-always-git-issues">resolved git issues (there&rsquo;s always git issues)</a></li>
+    <li><a href="#pushed-empty-initialized-repo-to-sqcuto_yapp">pushed empty-initialized repo to sqcu/to_yapp</a></li>
+    <li><a href="#wrote-another-hello-world-line">wrote another hello world line</a></li>
+    <li><a href="#heroku-push">heroku push?</a></li>
+    <li><a href="#take-a-break-this-last-step-was-substantially-stressful">take a break, this last step was substantially stressful</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#rise-and-grind-gamers">rise and grind gamers</a></li>
+    <li><a href="#scaffolding-aka-skate-fast-eat-ass-development">scaffolding aka &ldquo;skate fast eat ass development&rdquo;</a></li>
+    <li><a href="#database-migration">database migration</a></li>
+    <li><a href="#configure-dev-to_yapp-server-to-accept-incoming-connections">configure dev to_yapp server to accept incoming connections</a></li>
+    <li><a href="#crud-trials-completed">CRUD trials completed</a></li>
+    <li><a href="#routing-and-controllers">routing and controllers</a></li>
+    <li><a href="#microposts">microposts</a></li>
+    <li><a href="#applying-any-kind-of-input-validation-at-all-please-i-beg-you">applying any kind of input validation at all, please I beg you</a></li>
+    <li><a href="#data-model-associations">data model associations</a></li>
+    <li><a href="#watching-heroku-slowly-ingest-the-microblog-ruby-updates">watching heroku slowly ingest the microblog ruby updates</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#heroku-logs">heroku logs</a></li>
+    <li><a href="#add-styling">add styling</a></li>
+    <li><a href="#wrap-it-up-kids">wrap it up kids</a></li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Ruby Tutorial Speedrun
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-03-17 08:47:11 &#43;0300 &#43;0300" itemprop="datePublished">2021-03-17</time>
+          
+        </div>
+        
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <h1 id="preface">PREFACE</h1>
+<p>This is a story about how I accepted an interview with an organization that seemed to think I was a &ldquo;ruby&rdquo; (rails presumably?) developer.<br>
+Unwilling to disabuse a nice technical recruiter, and with only 1 full day to prepare for the interview&hellip;</p>
+<h1 id="chapter-one-hello-worlding">CHAPTER ONE: HELLO WORLDING</h1>
+<h2 id="provisioned-ide">provisioned IDE</h2>
+<p>[x]</p>
+<h2 id="configured-remote-cloud9-instance-for-rails">configured remote cloud9 instance for rails</h2>
+<p>[x]</p>
+<h2 id="initializing-project">initializing project</h2>
+<p>[x]</p>
+<h2 id="amended-project-gemfile">amended project gemfile</h2>
+<p>[x]	2021-03-16-1632</p>
+<h2 id="bundle-update-bundle-install-resolved-dependencies">bundle update, bundle install, resolved dependencies</h2>
+<p>[x]	1638</p>
+<h2 id="we-did-it-reddit">we did it reddit</h2>
+<p>[x]	1644</p>
+<pre><code>Yay! You’re on Rails!  
+
+MVC framework:  
+separation of concerns design:  
+user is using a Browser, which sends requests  
+the webserver passes requests to a Rails Controller.  
+    contextually a Controller might render a View,  
+    which is some templated thing that gets baked into a chain of HTML delimiters  
+    and shot at the user's browser out of a cannon.  
+database interacts only with a thing called a model,  
+    which is some kind of 'agent' that interacts with the database on the part of the Controller.  
+</code></pre>
+<h2 id="hello-worlded">hello worlded</h2>
+<p>[x]	1702</p>
+<pre><code>We're going to make our first diff from the empty-initialized app by adding a Controller Action.  
+It will render a string and serve that instead of the default rails page when the server is queried.  
+
+disgusterbigbluster:~/environment/hello_app (master) $ ls app/controllers/*_controller.rb  
+app/controllers/application_controller.rb  
+
+In our first exercise we are going to modify an existing controller rather than creating a new controller.  
+
+class ApplicationController &lt; ActionController::Base  
+end  
+
+--&gt;  
+
+class ApplicationController &lt; ActionController::Base  
+    def hello   
+        render html: &quot;what's good?&quot;  
+    end  
+end  
+
+That's pretty simple.
+Now that we have a class definition, we need to &quot;tell Rails to use that action instead of the default page&quot;.
+This is done by changing the &quot;root route&quot;, which determines the page served for requests for the &quot;root url&quot;
+The root url is commonly aliased to / (&quot;slash&quot;)
+
+config/routes.rb --&gt;  
+
+Rails.application.routes.draw do    
+    root 'application#hello'  
+end  
+
+And that's it!  
+We got to hello world!  
+</code></pre>
+<h2 id="git-single-time-setup-steps">git single time setup steps</h2>
+<p>[x]	1712</p>
+<pre><code>skipping git and heroku tutorial since we already have experience in git and in pushing to production.  
+</code></pre>
+<h1 id="chapter-two-a-to-yapp">CHAPTER TWO: A TO YAPP</h1>
+<pre><code>generating a scaffolding up to heaven  
+</code></pre>
+<h2 id="resolved-git-issues-theres-always-git-issues">resolved git issues (there&rsquo;s always git issues)</h2>
+<p>[x]	1801</p>
+<h2 id="pushed-empty-initialized-repo-to-sqcuto_yapp">pushed empty-initialized repo to sqcu/to_yapp</h2>
+<p>[x]	1801</p>
+<h2 id="wrote-another-hello-world-line">wrote another hello world line</h2>
+<p>[x]	1829</p>
+<h2 id="heroku-push">heroku push?</h2>
+<p>[x]	1922 (dt 53m)</p>
+<pre><code>disgusterbigbluster:~/environment/to_yapp (main) $ heroku create 
+Creating app... done, ⬢ frozen-ridge-66039
+https://frozen-ridge-66039.herokuapp.com/ | https://git.heroku.com/frozen-ridge-66039.git
+
+$ git commit -am &quot;Add hello&quot;  
+$ heroku create  
+$ git push &amp;&amp; git push heroku main  
+
+ok so this doesn't work
+our ruby was the wrong version and heroku considers 2.6.3v62 or whatever to be VERY INSECURE
+
+a long debug chain produced:
+rvm install 2.6.6
+rvm use 2.6.6
+
+Yes, we are now in &quot;copy magic numbers from heroku and command structures from stackoverflow DIRECTLY into the shell&quot;
+problem solving mode.  I don't like it.
+
+bundle update
+bundle install --without production
+
+very long update
+
+disgusterbigbluster:~/environment/to_yapp (main) $ ruby -v
+ruby 2.6.6p146 (2020-03-31 revision 67876) [x86_64-linux]
+
+ok pack it up boys that actually worked
+total elapsed time heroku-debugging: 53 minutes
+this might rival the total time spent on ruby-related tasks 
+</code></pre>
+<h2 id="take-a-break-this-last-step-was-substantially-stressful">take a break, this last step was substantially stressful</h2>
+<p>[x]	2107</p>
+<pre><code>actually ate dinner and did some other stuff instead of just taking a half hour
+running close to bedtime, might not work on the twitteric late in the night so thinking about it won't keep me awake
+</code></pre>
+<h1 id="chapter-three-data-model-and-crudding-it">CHAPTER THREE: DATA MODEL AND CRUDDING IT</h1>
+<h2 id="rise-and-grind-gamers">rise and grind gamers</h2>
+<p>[x]	2021-03-17-1129</p>
+<pre><code>the 'toy' in toe-yapper is that the 'microblog' platform won't have any nonessential features,
+such as, for example, user authentication or passwords.  
+we'll have a data model for &quot;users&quot; and for &quot;microposts&quot;.  
+
+users will have a unique identifier (integer),  
+a username (string),  
+and an email address (string).  
+microposts have an id (int,  
+a content field (of type &quot;text&quot;),  
+and a user id (int).  
+
+this sounds a lot like a minimal textboard, because it kind of is!  
+</code></pre>
+<h2 id="scaffolding-aka-skate-fast-eat-ass-development">scaffolding aka &ldquo;skate fast eat ass development&rdquo;</h2>
+<p>[x]	1146</p>
+<pre><code>&quot;scaffold&quot; is a command ingested by the &quot;rails generate&quot; script.
+the argument for the &quot;scaffold&quot; command is the singular version of resource name (e.g. User),
+together with optional params for the data model's attributes.
+
+example of use:  
+rails generate scaffold User name:string email:string  
+.  
+.  
+.  
+Your Ruby version is 2.6.3, but your Gemfile specified 2.6.6  
+
+instead of approaching this problem in some more complicated way, what if we just tried  
+rvm use 2.6.6
+
+and we're golden, scaffolder did its scaffolding!
+
+of note: ruby automatically creates a 'primary key' in the database besides the specified name:string and email:string fields!  
+we can (will) just hijack the primary key as our uid for microblog.
+</code></pre>
+<h2 id="database-migration">database migration</h2>
+<p>[x]	1149</p>
+<pre><code>disgusterbigbluster:~/environment/to_yapp (main) $ rails db:migrate    
+== 20210317184501 CreateUsers: migrating ======================================  
+-- create_table(:users)  
+-&gt; 0.0056s  
+== 20210317184501 CreateUsers: migrated (0.0061s) =============================  
+</code></pre>
+<h2 id="configure-dev-to_yapp-server-to-accept-incoming-connections">configure dev to_yapp server to accept incoming connections</h2>
+<p>[x]	1151</p>
+<h2 id="crud-trials-completed">CRUD trials completed</h2>
+<p>[x]	1158</p>
+<pre><code>the ruby server logging is actually pretty interesting!  
+
+Started POST &quot;/users&quot; for 67.180.169.167 at 2021-03-17 18:58:13 +0000  
+Cannot render console from 67.180.169.167! Allowed networks: 127.0.0.0/127.255.255.255, ::1  
+Processing by UsersController#create as JS  
+Parameters: {&quot;authenticity_token&quot;=&gt;&quot;wxxm9eOLs9n+z7YdpHGvtZdoSvZkuJm9uWRg72jTqxr3dQ9iuUJvZUmAm6yR2kYjMPGDF8bUVpI9crSp5GWE0g==&quot;, &quot;user&quot;=&gt;{&quot;name&quot;=&gt;&quot;ronald bruhington II&quot;, &quot;email&quot;=&gt;&quot;bruhbruh@example.com&quot;}, &quot;commit&quot;=&gt;&quot;Create User&quot;}  
+TRANSACTION (0.1ms)  begin transaction  
+↳ app/controllers/users_controller.rb:30:in `block in create'  
+User Create (3.2ms)  INSERT INTO &quot;users&quot; (&quot;name&quot;, &quot;email&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?)  [[&quot;name&quot;, &quot;ronald bruhington II&quot;], [&quot;email&quot;, &quot;bruhbruh@example.com&quot;], [&quot;created_at&quot;, &quot;2021-03-17 18:58:13.773344&quot;], [&quot;updated_at&quot;, &quot;2021-03-17 18:58:13.773344&quot;]]  
+↳ app/controllers/users_controller.rb:30:in `block in create'  
+TRANSACTION (6.3ms)  commit transaction  
+↳ app/controllers/users_controller.rb:30:in `block in create'  
+Redirected to https://753f368d3e0d41e7bc4b8bc287996e63.vfs.cloud9.us-west-1.amazonaws.com/users/3  
+Completed 200 OK in 21ms (ActiveRecord: 9.5ms | Allocations: 4606)  
+
+We get a description of every db transaction we requested by interacting with the server from the html front-end, including the time cost for each transaction.
+</code></pre>
+<h2 id="routing-and-controllers">routing and controllers</h2>
+<p>[x]	1218</p>
+<pre><code>we replaced our old index in routes.rb with  
+root 'users#index'  
+this ought to change the root page for our server to the users index, I think
+it appears that the scaffolded users_controller.rb inherits application_controller.rb.
+I would not be surprised if our 'hello' action could be invoked by users_controller!
+
+messed around with some of the controller output strings corresponding to our CRUD actions.
+as always, the four elements of traditional mythology are CREATE/POST, READ/GET, UPDATE/PATCH, and DELETE/DELETE.
+
+def index  
+  @users = User.all  
+end  
+
+the line &quot;@users = User.all&quot; requests the User model to retrieve all users within the database, 
+then places them inside the instance variable &quot;@users&quot; where I suppose it is used by the other controller definitions!
+instance variables are available to Views by default, which goes pretty far to explain the spooky magic of how the autogenerated CRUD app has so few lines of boilerplate code. 
+
+when we inspect user.rb from our scaffolded code, we see  
+
+class User &lt; ApplicationRecord  
+end  
+
+our entire user data model is just inherited from the ApplicationRecord library!
+also of note is the complete absence of input validation/sanitation,  
+complete absence of authentication,  
+complete absence of styling,  
+and of course generating this scaffolded code fostered very little understanding of how to write an equivalent web app!  
+the scaffolded code is still quite nice for demonstrating the structure of ruby-on-rails projects, and how the resources interact with each other.
+</code></pre>
+<h2 id="microposts">microposts</h2>
+<p>[x]	1229</p>
+<pre><code>it's 3 am, time for your code scaffolding!  
+	
+rails generate scaffold Micropost content:text user_id:integer  
+	
+disgusterbigbluster:~/environment/to_yapp (main) $ rails db:migrate  
+== 20210317192149 CreateMicroposts: migrating =================================  
+-- create_table(:microposts)  
+    -&gt; 0.0111s  
+== 20210317192149 CreateMicroposts: migrated (0.0123s) ========================  
+
+our routes.rb was updated automatically to include a &quot;resources :microposts&quot; entry, how convenient!  
+this implies we'll see something if we hit /microposts
+and it does!
+
+interestingly, we don't even need to reload the rails server to immediately serve up &quot;/microposts&quot;, actually make a micropost, and then view it!
+
+Started POST &quot;/microposts&quot; for 67.180.169.167 at 2021-03-17 19:27:11 +0000  
+Cannot render console from 67.180.169.167! Allowed networks: 127.0.0.0/127.255.255.255, ::1  
+Processing by MicropostsController#create as JS  
+Parameters: {&quot;authenticity_token&quot;=&gt;&quot;8PHnii9sfp8RVI60YhmfKRbb7mLqjSUNO8xK59lPX+wqfep1YhEIxap7V7AYS4eXqsBv86H6GHxunMs5wTmR1g==&quot;, &quot;micropost&quot;=&gt;{&quot;content&quot;=&gt;&quot;THIS MUSIC IS PRETTY AGRESSIVE AND MERLY SHOULD BE ONLY LISTENED TO BY THE RESPECT HIMSELF YES THE GOD THE PAST HUMAN THE! \&quot;Lil B\&quot;\n\nTHANK YOU BASEDGOD THANK YOU - Lil B\n&quot;, &quot;user_id&quot;=&gt;&quot;1&quot;}, &quot;commit&quot;=&gt;&quot;Create Micropost&quot;}  
+TRANSACTION (0.1ms)  begin transaction  
+↳ app/controllers/microposts_controller.rb:30:in `block in create'  
+Micropost Create (2.0ms)  INSERT INTO &quot;microposts&quot; (&quot;content&quot;, &quot;user_id&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?)  [[&quot;content&quot;, &quot;THIS MUSIC IS PRETTY AGRESSIVE AND MERLY SHOULD BE ONLY LISTENED TO BY THE RESPECT HIMSELF YES THE GOD THE PAST HUMAN THE! \&quot;Lil B\&quot;\n\nTHANK YOU BASEDGOD THANK YOU - Lil B\n&quot;], [&quot;user_id&quot;, 1], [&quot;created_at&quot;, &quot;2021-03-17 19:27:11.581087&quot;], [&quot;updated_at&quot;, &quot;2021-03-17 19:27:11.581087&quot;]]  
+↳ app/controllers/microposts_controller.rb:30:in `block in create'  
+TRANSACTION (7.0ms)  commit transaction  
+↳ app/controllers/microposts_controller.rb:30:in `block in create'  
+Redirected to https://753f368d3e0d41e7bc4b8bc287996e63.vfs.cloud9.us-west-1.amazonaws.com/microposts/1  
+Completed 200 OK in 25ms (ActiveRecord: 9.0ms | Allocations: 4656)  
+</code></pre>
+<h2 id="applying-any-kind-of-input-validation-at-all-please-i-beg-you">applying any kind of input validation at all, please I beg you</h2>
+<p>[x]	1243</p>
+<pre><code>this step is pretty direct too!
+micropost.rb 
+--&gt;
+...  
+validates :content, length: { maximum:144 }  
+...  
+
+oddly: our documentation believes that an autogenerated error message will be rendered in html and shot at the user.
+in practice, our validation rule happens silently and no error panel is drawn up for the user :(
+double oddly: our website seems to work in the same browser as the AWS cloud9 console, but not in a chrome instance to cross-check this behavior.
+</code></pre>
+<h2 id="data-model-associations">data model associations</h2>
+<p>[x]  1252</p>
+<pre><code>user.rb  
+--&gt;  
+has_many :microposts  
+
+micropost.rb  
+--&gt;  
+belongs_to :user
+
+they're paired off! so cute!  
+using rails console, we can probe the user and see the microposts connected to their uid!
+
+2.6.6 :004 &gt; first_user = User.first  
+User Load (0.1ms)  SELECT &quot;users&quot;.* FROM &quot;users&quot; ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT ?  [[&quot;LIMIT&quot;, 1]]  
+    =&gt; #&lt;User id: 1, name: &quot;rick stickler&quot;, email: &quot;prickler@example.com&quot;, created_at: &quot;2021-03-17 18:56:08.583860000 +0000&quot;, updated_at: &quot;2021-03-17 18:56:36.406863000 +0000&quot;&gt;   
+2.6.6 :005 &gt; first_user.microposts  
+Micropost Load (0.1ms)  SELECT &quot;microposts&quot;.* FROM &quot;microposts&quot; WHERE &quot;microposts&quot;.&quot;user_id&quot; = ? /* loading for inspect */ LIMIT ?  [[&quot;user_id&quot;, 1], [&quot;LIMIT&quot;, 11]]  
+    =&gt; #&lt;ActiveRecord::Associations::CollectionProxy [#&lt;Micropost id: 1, content: &quot;THIS MUSIC IS PRETTY AGRESSIVE AND MERLY SHOULD BE...&quot;, user_id: 1, created_at: &quot;2021-03-17 19:27:11.581087000 +0000&quot;, updated_at: &quot;2021-03-17 19:27:11.581087000 +0000&quot;&gt;]&gt;   
+
+micropost = first_user.microposts.first
+...
+micropost.user
+...
+
+this output is pretty robust!
+</code></pre>
+<h2 id="watching-heroku-slowly-ingest-the-microblog-ruby-updates">watching heroku slowly ingest the microblog ruby updates</h2>
+<p>[x]	1259</p>
+<pre><code>remote: Verifying deploy... done.  
+To https://git.heroku.com/frozen-ridge-66039.git  
+    09ae02c..44a3065  main -&gt; main  
+--&gt;  	
+    We're sorry, but something went wrong.  
+If you are the application owner check the logs for more information.  
+
+unsurprisingly, heroku is the weakest link in the cloud9 -&gt; ruby on rails -&gt; heroku production chain.
+rolling back to the hello world revision so the heroku server does something instead of nothing at all.  
+disappointing.
+</code></pre>
+<h1 id="chapter-four-opaque-remote-host-debugging">CHAPTER FOUR: OPAQUE REMOTE HOST DEBUGGING</h1>
+<h2 id="heroku-logs">heroku logs</h2>
+<p>[x]	1312<br>
+$ heroku logs</p>
+<pre><code>2021-03-17T19:57:00.014048+00:00 app[web.1]: I, [2021-03-17T19:57:00.013978 #4]  INFO -- : [912839ee-265f-4ab0-b4d6-536928a20974] Completed 500 Internal Server Error in 163ms (ActiveRecord: 82.6ms | Allocations: 5718)   
+2021-03-17T19:57:00.016193+00:00 app[web.1]: [912839ee-265f-4ab0-b4d6-536928a20974] ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation &quot;users&quot; does not exist  
+2021-03-17T19:57:00.016193+00:00 app[web.1]: LINE 1: SELECT &quot;users&quot;.* FROM &quot;users&quot;  
+2021-03-17T19:57:00.016194+00:00 app[web.1]: ^  
+2021-03-17T19:57:00.016194+00:00 app[web.1]: ):  
+
+heroku run rails db:migrate  
+...
+</code></pre>
+<h2 id="add-styling">add styling</h2>
+<p>[x]	1327</p>
+<pre><code>app/assets/stylesheets/  
++fiftyeightplus.css  
+
+app/view/layouts/  
+application.html.erb  
+--&gt;
+...
+    &lt;%= stylesheet_link_tag 'fiftyeightplus.css' %&gt;  
+...  
+
+git add .
+git commit -m &quot;add styling&quot;
+git push &amp;&amp; git push heroku main 
+</code></pre>
+<h2 id="wrap-it-up-kids">wrap it up kids</h2>
+<p>[x] 1338</p>
+<pre><code>pushed this notes document to static site generator
+wondered why most of the post is rendered in code blocks
+rendered the rest of the post in code blocks :)
+</code></pre>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#provisioned-ide">provisioned IDE</a></li>
+    <li><a href="#configured-remote-cloud9-instance-for-rails">configured remote cloud9 instance for rails</a></li>
+    <li><a href="#initializing-project">initializing project</a></li>
+    <li><a href="#amended-project-gemfile">amended project gemfile</a></li>
+    <li><a href="#bundle-update-bundle-install-resolved-dependencies">bundle update, bundle install, resolved dependencies</a></li>
+    <li><a href="#we-did-it-reddit">we did it reddit</a></li>
+    <li><a href="#hello-worlded">hello worlded</a></li>
+    <li><a href="#git-single-time-setup-steps">git single time setup steps</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#resolved-git-issues-theres-always-git-issues">resolved git issues (there&rsquo;s always git issues)</a></li>
+    <li><a href="#pushed-empty-initialized-repo-to-sqcuto_yapp">pushed empty-initialized repo to sqcu/to_yapp</a></li>
+    <li><a href="#wrote-another-hello-world-line">wrote another hello world line</a></li>
+    <li><a href="#heroku-push">heroku push?</a></li>
+    <li><a href="#take-a-break-this-last-step-was-substantially-stressful">take a break, this last step was substantially stressful</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#rise-and-grind-gamers">rise and grind gamers</a></li>
+    <li><a href="#scaffolding-aka-skate-fast-eat-ass-development">scaffolding aka &ldquo;skate fast eat ass development&rdquo;</a></li>
+    <li><a href="#database-migration">database migration</a></li>
+    <li><a href="#configure-dev-to_yapp-server-to-accept-incoming-connections">configure dev to_yapp server to accept incoming connections</a></li>
+    <li><a href="#crud-trials-completed">CRUD trials completed</a></li>
+    <li><a href="#routing-and-controllers">routing and controllers</a></li>
+    <li><a href="#microposts">microposts</a></li>
+    <li><a href="#applying-any-kind-of-input-validation-at-all-please-i-beg-you">applying any kind of input validation at all, please I beg you</a></li>
+    <li><a href="#data-model-associations">data model associations</a></li>
+    <li><a href="#watching-heroku-slowly-ingest-the-microblog-ruby-updates">watching heroku slowly ingest the microblog ruby updates</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#heroku-logs">heroku logs</a></li>
+    <li><a href="#add-styling">add styling</a></li>
+    <li><a href="#wrap-it-up-kids">wrap it up kids</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&text=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&title=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&is_video=false&description=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Ruby%20Tutorial%20Speedrun&body=Check out this article: https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&title=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&title=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&title=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&title=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&name=Ruby%20Tutorial%20Speedrun&description=PREFACE%20This%20is%20a%20story%20about%20how%20I%20accepted%20an%20interview%20with%20an%20organization%20that%20seemed%20to%20think%20I%20was%20a%20%26ldquo%3bruby%26rdquo%3b%20%28rails%20presumably%3f%29%20developer.%0aUnwilling%20to%20disabuse%20a%20nice%20technical%20recruiter%2c%20and%20with%20only%201%20full%20day%20to%20prepare%20for%20the%20interview%26hellip%3b%0aCHAPTER%20ONE%3a%20HELLO%20WORLDING%20provisioned%20IDE%20%5bx%5d%0aconfigured%20remote%20cloud9%20instance%20for%20rails%20%5bx%5d%0ainitializing%20project%20%5bx%5d%0aamended%20project%20gemfile%20%5bx%5d%092021-03-16-1632%0abundle%20update%2c%20bundle%20install%2c%20resolved%20dependencies%20%5bx%5d%091638">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-tutorial-speedrun%2f&t=Ruby%20Tutorial%20Speedrun">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2021  Same QCU 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+
+
+</html>
