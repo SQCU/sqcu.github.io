@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Ruby (on) Rails Retro(spective) | Same QCU</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Ruby (on) Rails Retro(spective)" />
+<meta property="og:description" content="PREFACE Ruby-speedrun was a &lsquo;fun&rsquo; project. I&rsquo;d heard mythically good things about ru on rai in the past,
+ (although I can never quite remember the sources?)
+(maybe I&rsquo;m conflating multiple 00s/10s bloggers with Patrick McKenzie&rsquo;s posts on rapid web development in RuORai?)
+ at the very least that it was fast, simple, and straightforward to directly add fleshed out features to a dynamic web app.
+ (everything on a computer is just an app these days 😔)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sqcu.github.io/posts/ruby-rails-retro/" />
+<meta property="article:published_time" content="2021-03-29T16:30:01-07:00" />
+<meta property="article:modified_time" content="2021-03-29T16:30:01-07:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ruby (on) Rails Retro(spective)"/>
+<meta name="twitter:description" content="PREFACE Ruby-speedrun was a &lsquo;fun&rsquo; project. I&rsquo;d heard mythically good things about ru on rai in the past,
+ (although I can never quite remember the sources?)
+(maybe I&rsquo;m conflating multiple 00s/10s bloggers with Patrick McKenzie&rsquo;s posts on rapid web development in RuORai?)
+ at the very least that it was fast, simple, and straightforward to directly add fleshed out features to a dynamic web app.
+ (everything on a computer is just an app these days 😔)"/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://sqcu.github.io/css/style-white.css">
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://sqcu.github.io/images/favicon.ico" />
+
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://sqcu.github.io/posts/ruby-tutorial-speedrun/">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&text=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&title=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&is_video=false&description=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Ruby%20%28on%29%20Rails%20Retro%28spective%29&body=Check out this article: https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&title=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&title=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&title=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-stumbleupon " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&title=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-digg " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&name=Ruby%20%28on%29%20Rails%20Retro%28spective%29&description=PREFACE%20Ruby-speedrun%20was%20a%20%26lsquo%3bfun%26rsquo%3b%20project.%20I%26rsquo%3bd%20heard%20mythically%20good%20things%20about%20ru%20on%20rai%20in%20the%20past%2c%0a%20%28although%20I%20can%20never%20quite%20remember%20the%20sources%3f%29%0a%28maybe%20I%26rsquo%3bm%20conflating%20multiple%2000s%2f10s%20bloggers%20with%20Patrick%20McKenzie%26rsquo%3bs%20posts%20on%20rapid%20web%20development%20in%20RuORai%3f%29%0a%20at%20the%20very%20least%20that%20it%20was%20fast%2c%20simple%2c%20and%20straightforward%20to%20directly%20add%20fleshed%20out%20features%20to%20a%20dynamic%20web%20app.%0a%20%28everything%20on%20a%20computer%20is%20just%20an%20app%20these%20days%20%f0%9f%98%94%29">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&t=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents"></nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Ruby (on) Rails Retro(spective)
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-03-29 16:30:01 -0700 PDT" itemprop="datePublished">2021-03-29</time>
+          
+        </div>
+        
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <h1 id="preface">PREFACE</h1>
+<p>Ruby-speedrun was a &lsquo;fun&rsquo; project.
+I&rsquo;d heard mythically good things about ru on rai in the past,</p>
+<blockquote>
+<p>(although I can never quite remember the sources?)<br>
+(maybe I&rsquo;m conflating multiple 00s/10s bloggers with <a href="https://www.kalzumeus.com/2009/08/15/introducing-abingo-rails-split-testing/">Patrick McKenzie&rsquo;s posts</a> on rapid web development in RuORai?)</p>
+</blockquote>
+<p>at the very least that it was fast, simple, and straightforward to directly add fleshed out features to a dynamic web app.</p>
+<blockquote>
+<p>(everything on a computer is just an app these days 😔)</p>
+</blockquote>
+<p>Since the purpose of a web(site/app) is to serve a document, blob of code, or pile of visual experiences to the needs of a user, rapid iteration and acting on feedback from users is important!
+Very important!
+It&rsquo;s best for your code to already be complete and shipped, but if that isn&rsquo;t on the docket, &ldquo;shipped as fast as possible&rdquo; is almost acceptable.
+Working so slowly that you understand your code might work for waterfall-at-broderbund-in-1983, but it just isn&rsquo;t a fast enough OODA loop for the far-flung future of 2007+N.</p>
+<p>The real specifications and requirements for your project will ultimately emerge at the interface between the compiled/running/displayed piece and its audience.<br>
+For various reasons not in the scope of this blog post, it just isn&rsquo;t possible for you to imagine your user&rsquo;s mind with such detail &amp; precision that you can guess exactly what they need.<br>
+Since you can&rsquo;t guess what your users need, your guessed specifications/requirements will always diverge from the user&rsquo;s!<br>
+It follows that (even/especially) the best-laid plans inevitably require refactors, rewrites, revisions.</p>
+<h1 id="goals">GOALS</h1>
+<p>With that out of the way, RuORai is Mythically Fast.</p>
+<blockquote>
+<p>(Sure, configuring a development environment takes time, but in post-virtualization land you can just fetch a clean dev environment that&rsquo;s already set up!)</p>
+</blockquote>
+<p>I wanted to find out what the big deal was with &lsquo;writing&rsquo; entire &lsquo;web-apps&rsquo; with one-liners,<br>
+try out &lsquo;cloud-IDEs&rsquo; and pre-configured environments,<br>
+and see if I could &ldquo;learn&rdquo; a new framework fast enough to push a working (if boring) web app in under 24 hours.<br>
+Using Heroku as a deploy target was unabashed scope creep and somewhat irresponsible for a timed project!</p>
+<h1 id="challenges">CHALLENGES</h1>
+<p>Heroku.
+Everything that &ldquo;just worked&rdquo; locally in the dev environment did not &ldquo;just work&rdquo; on the deploy target.<br>
+Sure, pushes always made it to the deploy target, but&hellip;<br>
+Databases failed to initialize, requiring manual prodding to the remote server.<br>
+Versions of our frameworks were rejected by the remote server and had to be massaged into correctness.<br>
+Without introducing dependency conflicts. On a hello world toy project.</p>
+<p>These are minor tasks/fixes, sure, but each minor debugging task occupied around 4x to 8x the time of any task step which just worked.
+Under a serious time limit, like &lsquo;get the project done by the end of the day / week / month&rsquo;, it&rsquo;s easy to see how they could balloon to fill all of the available time in a project.</p>
+<h1 id="successes">SUCCESSES</h1>
+<p>Forcing out a dynamic web app that correctly reads from, writes to, and deletes from a database in around 4 hours of work, 4 hours of debugging, and ~12 hours of sleeping / procrastinating felt pretty good!
+I want to revisit the pedagogical resources I was using and flesh out a &lsquo;complete&rsquo; toy social-media-service.</p>
+<p>Working on this project updated my expectations of the time-cost and complexity of plugging databases and rendering rule together from around<br>
+&lsquo;1 week per feature, around a month to a complete project&rsquo;<br>
+to around<br>
+&lsquo;1 day per feature, around 1 week to a complete project&rsquo;.</p>
+<p>I&rsquo;m sure that at MEGAFANG-TRUNK-OF-THE-INTERNET scale there are probably some issues with using RuORai.<br>
+Of course, the problems that come from having millions of users and hundreds of millions of hits per month are good to have.<br>
+There&rsquo;s no use in theorycrafting how to scale from 100,000 users to 10,000,000 when you don&rsquo;t even have 10 active users yet.</p>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents"></nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&text=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&title=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&is_video=false&description=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Ruby%20%28on%29%20Rails%20Retro%28spective%29&body=Check out this article: https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&title=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&title=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&title=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&title=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&name=Ruby%20%28on%29%20Rails%20Retro%28spective%29&description=PREFACE%20Ruby-speedrun%20was%20a%20%26lsquo%3bfun%26rsquo%3b%20project.%20I%26rsquo%3bd%20heard%20mythically%20good%20things%20about%20ru%20on%20rai%20in%20the%20past%2c%0a%20%28although%20I%20can%20never%20quite%20remember%20the%20sources%3f%29%0a%28maybe%20I%26rsquo%3bm%20conflating%20multiple%2000s%2f10s%20bloggers%20with%20Patrick%20McKenzie%26rsquo%3bs%20posts%20on%20rapid%20web%20development%20in%20RuORai%3f%29%0a%20at%20the%20very%20least%20that%20it%20was%20fast%2c%20simple%2c%20and%20straightforward%20to%20directly%20add%20fleshed%20out%20features%20to%20a%20dynamic%20web%20app.%0a%20%28everything%20on%20a%20computer%20is%20just%20an%20app%20these%20days%20%f0%9f%98%94%29">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fsqcu.github.io%2fposts%2fruby-rails-retro%2f&t=Ruby%20%28on%29%20Rails%20Retro%28spective%29">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2021  Same QCU 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+
+
+</html>

@@ -6,7 +6,20 @@
     <description>Recent content in Posts on Same QCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Mar 2021 08:47:11 +0300</lastBuildDate><atom:link href="https://sqcu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Mar 2021 16:30:01 -0700</lastBuildDate><atom:link href="https://sqcu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ruby (on) Rails Retro(spective)</title>
+      <link>https://sqcu.github.io/posts/ruby-rails-retro/</link>
+      <pubDate>Mon, 29 Mar 2021 16:30:01 -0700</pubDate>
+      
+      <guid>https://sqcu.github.io/posts/ruby-rails-retro/</guid>
+      <description>PREFACE Ruby-speedrun was a &amp;lsquo;fun&amp;rsquo; project. I&amp;rsquo;d heard mythically good things about ru on rai in the past,
+ (although I can never quite remember the sources?)
+(maybe I&amp;rsquo;m conflating multiple 00s/10s bloggers with Patrick McKenzie&amp;rsquo;s posts on rapid web development in RuORai?)
+ at the very least that it was fast, simple, and straightforward to directly add fleshed out features to a dynamic web app.
+ (everything on a computer is just an app these days 😔)</description>
+    </item>
+    
     <item>
       <title>Ruby Tutorial Speedrun</title>
       <link>https://sqcu.github.io/posts/ruby-tutorial-speedrun/</link>
